@@ -1,7 +1,7 @@
 # TisLib for AMI TCG2 Module.
 
 Background of this work.
-AMI TCG2 module does not support measure boot on the TPM chip which is using I2C. This work is to overcome such limitation by leveraging the TIS driver in Tiano framework to AMI Aptio5 TCG2 module.
+* AMI TCG2 module does not support measure boot on the TPM chip which is using I2C. This work is to overcome such limitation by leveraging the TIS driver in Tiano framework to AMI Aptio5 TCG2 module and replace its original TIS driver for LPC TPM 1.2 chips.
 
 Description of the work.
 * Add TIS(TPM interface specification) driver to relay TPM 1.2 commands to Infineon 9645 I2C TPM 1.2 part.
