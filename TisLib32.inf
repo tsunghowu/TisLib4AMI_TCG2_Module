@@ -1,0 +1,25 @@
+
+[Defines]
+INF_VERSION     = 0x00010005
+VERSION_STRING  = 1.0
+BASE_NAME       = TisLib32
+MODULE_TYPE     = PEIM
+LIBRARY_CLASS   = BaseTisLib32
+FILE_GUID       = 8B4E53DC-A6BF-46ff-A09D-42874795C816
+
+[Sources]
+ TpmLib-I2C.c
+ TcgCommon.c
+	
+[LibraryClasses]
+Shalib32
+#ChwTisI2CBaseLib32
+ChwTisAccessInterfaceBaseLib32
+
+[Packages]
+AmiCompatibilityPkg\AmiCompatibilityPkg.dec
+MdePkg\MdePkg.dec
+AmiModulePkg\AmiModulePkg.dec
+
+#[BuildOptions]
+#  MSFT:*_*_*_CC_FLAGS = /Od -DEFI_DEBUG -DADLINK_NDEBUG

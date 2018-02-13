@@ -1,0 +1,31 @@
+
+[Defines]
+INF_VERSION     = 0x00010005
+VERSION_STRING  = 1.0
+BASE_NAME       = ChwTisI2CLib32
+MODULE_TYPE     = PEIM
+LIBRARY_CLASS   = ChwTisI2CBaseLib32
+FILE_GUID       = 6851AEE6-EACB-4b63-BDD9-208C9B64BF5C
+
+[Sources]
+ I2CLib\I2C.c
+ I2CLib\CommonHeader.h
+ I2CLib\I2C.h
+	
+[LibraryClasses]
+  PciLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  DebugLib
+  BaseLib
+  TimerLib
+  IoLib
+
+[Packages]
+  MdePkg\MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  IntelFrameworkPkg/IntelFrameworkPkg.dec
+  IntelFrameworkModulePkg/IntelFrameworkModulePkg.dec
+
+#[BuildOptions]
+#  MSFT:*_*_*_CC_FLAGS = /Od -DEFI_DEBUG -DADLINK_NDEBUG

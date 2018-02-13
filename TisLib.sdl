@@ -1,0 +1,46 @@
+#Keep the declaration in TisLib.sdl and add below.
+#CHW+
+INFComponent
+    Name  = "ChwTisI2CLib32"
+    File  = "ChwTisI2CLib32.inf"
+    Package  = "AmiModulePkg"
+End
+
+LibraryMapping
+    Class  = "ChwTisI2CBaseLib32"
+    Instance  = "AmiModulePkg.ChwTisI2CLib32"
+End
+
+INFComponent
+    Name  = "ChwTisI2CLib"
+    File  = "ChwTisI2CLib.inf"
+    Package  = "AmiModulePkg"
+End
+
+LibraryMapping
+    Class  = "ChwTisI2CBaseLib"
+    Instance  = "AmiModulePkg.ChwTisI2CLib"
+End
+#CHW-
+
+INFComponent
+    Name  = "ChwTisAccessInterfaceLib"
+    File  = "ChwTisAccessInterfaceLib.inf"
+    Package  = "AmiModulePkg"
+End
+
+LibraryMapping
+    Class  = "ChwTisAccessInterfaceBaseLib"
+    Instance  = "AmiModulePkg.ChwTisAccessInterfaceLib"
+End
+
+INFComponent
+    Name  = "ChwTisAccessInterfaceLib32"
+    File  = "ChwTisAccessInterfaceLib32.inf"
+    Package  = "AmiModulePkg"
+End
+
+LibraryMapping
+    Class  = "ChwTisAccessInterfaceBaseLib32"
+    Instance  = "AmiModulePkg.ChwTisAccessInterfaceLib32"
+End

@@ -1,0 +1,32 @@
+[Defines]
+INF_VERSION     = 0x00010005
+VERSION_STRING  = 1.0
+BASE_NAME       = ChwTisAccessInterfaceLib
+MODULE_TYPE     = PEIM
+LIBRARY_CLASS   = ChwTisAccessInterfaceBaseLib
+FILE_GUID       = 6E28C81D-21DB-4a1c-8AEF-9FD94F2EEB87
+
+[Sources]
+ I2CTisLib\TpmCommLib\TpmAccess.c
+ I2CTisLib\TpmCommLib\TpmAccess.h
+	
+[LibraryClasses]
+  PciLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  DebugLib
+  BaseLib
+  TimerLib
+  IoLib
+  HobLib
+  ChwTisI2CBaseLib
+
+[Packages]
+  MdePkg\MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  IntelFrameworkPkg/IntelFrameworkPkg.dec
+  IntelFrameworkModulePkg/IntelFrameworkModulePkg.dec
+
+#[BuildOptions]
+#  MSFT:*_*_*_CC_FLAGS = /Od
+  # -DEFI_DEBUG -DADLINK_NDEBUG
